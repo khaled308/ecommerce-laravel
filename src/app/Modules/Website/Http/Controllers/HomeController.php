@@ -10,4 +10,8 @@ class HomeController extends Controller
     public function index(){
         return view("website::index");
     }
+
+    public function shop(){
+        return view('website::shop');
+    }
 }

@@ -160,6 +160,8 @@ return [
          * Package Service Providers...
          */
         App\Modules\Website\Providers\WebsiteServiceProvider::class,
+        App\Modules\Cart\Providers\CartServiceProvider::class,
+        App\Modules\Checkout\Providers\CheckoutServiceProvider::class,
 
         /*
          * Application Service Providers...
