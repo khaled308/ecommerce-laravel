@@ -12,8 +12,10 @@
                     </div>
                     <div class="topbar-menu right-menu">
                         <ul>
-                            <li class="menu-item" ><a title="Register or Login" href="{{route('login')}}">Login</a></li>
-                            <li class="menu-item" ><a title="Register or Login" href="{{route('register')}}">Register</a></li>
+                            @guest
+                                <li class="menu-item" ><a title="Register or Login" href="{{route('login')}}">Login</a></li>
+                                <li class="menu-item" ><a title="Register or Login" href="{{route('register')}}">Register</a></li>
+                            @endguest
                             <li class="menu-item lang-menu menu-item-has-children parent">
                                 <a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="submenu lang" >
@@ -23,6 +25,20 @@
                                     <li class="menu-item" ><a title="canada" href="#"><span class="img label-before"><img src="assets/images/lang-can.png" alt="lang-can"></span>Canada</a></li>
                                 </ul>
                             </li>
+                            @auth
+                                <li class="menu-item lang-menu menu-item-has-children parent">
+                                    {{auth()->user()->name}}
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <ul class="submenu lang" >
+                                        <li class="menu-item" >
+                                            <a title="Logout" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                            <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            @endauth
                             <li class="menu-item menu-item-has-children parent" >
                                 <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="submenu curency" >

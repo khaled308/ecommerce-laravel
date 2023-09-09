@@ -12,7 +12,17 @@
 		<div class=" main-content-area">
 			<div class="wrap-login-item ">						
 				<div class="login-form form-item form-stl">
-					<form name="frm-login">
+					@if ($errors->any())
+						<div class="alert alert-danger">
+							<ul>
+								@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+								@endforeach
+							</ul>
+							</div>
+					@endif
+					<form name="frm-login" method="POST">
+						@csrf
 						<fieldset class="wrap-title">
 							<h3 class="form-title">Log in to your account</h3>										
 						</fieldset>
@@ -22,7 +32,7 @@
 						</fieldset>
 						<fieldset class="wrap-input">
 							<label for="frm-login-pass">Password:</label>
-							<input type="password" id="frm-login-pass" name="pass" placeholder="************">
+							<input type="password" id="frm-login-pass" name="password" placeholder="************">
 						</fieldset>
 						
 						<fieldset class="wrap-input">

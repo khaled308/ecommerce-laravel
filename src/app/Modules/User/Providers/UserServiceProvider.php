@@ -2,6 +2,7 @@
 
 namespace App\Modules\User\Providers;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class UserServiceProvider extends ServiceProvider{
@@ -11,7 +12,8 @@ class UserServiceProvider extends ServiceProvider{
 
     public function boot(){
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
-        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+        Route::middleware('web')
+                ->group(__DIR__ . '/../routes/web.php');
     }
 
 }
