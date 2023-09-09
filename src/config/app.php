@@ -162,6 +162,8 @@ return [
         App\Modules\Website\Providers\WebsiteServiceProvider::class,
         App\Modules\Cart\Providers\CartServiceProvider::class,
         App\Modules\Checkout\Providers\CheckoutServiceProvider::class,
+        App\Modules\User\Providers\UserServiceProvider::class,
+        App\Modules\Auth\Providers\AuthServiceProvider::class,
 
         /*
          * Application Service Providers...
