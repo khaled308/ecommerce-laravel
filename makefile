@@ -19,4 +19,5 @@ migrate:
 	$(COMPOSER) artisan migrate
 
 seed:
-	$(COMPOSER) artisan db:seed --class="App\Modules\User\database\seeders\UserSeeder"
+	# $(COMPOSER) artisan db:seed --class="App\Modules\User\database\seeders\UserSeeder"
+	$(COMPOSER) artisan db:seed --class="App\Modules\Category\database\seeders\CategorySeeder"
