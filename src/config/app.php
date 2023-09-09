@@ -159,13 +159,13 @@ return [
         /*
          * Package Service Providers...
          */
+        App\Modules\Category\Providers\CategoryServiceProvider::class,
+        App\Modules\Product\Providers\ProductServiceProvider::class,
         App\Modules\Website\Providers\WebsiteServiceProvider::class,
         App\Modules\Cart\Providers\CartServiceProvider::class,
         App\Modules\Checkout\Providers\CheckoutServiceProvider::class,
         App\Modules\User\Providers\UserServiceProvider::class,
         App\Modules\Auth\Providers\AuthServiceProvider::class,
-        App\Modules\Category\Providers\CategoryServiceProvider::class,
-        App\Modules\Product\Providers\ProductServiceProvider::class,
 
         /*
          * Application Service Providers...
