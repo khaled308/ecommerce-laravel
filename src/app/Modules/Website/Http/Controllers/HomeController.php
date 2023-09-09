@@ -19,4 +19,12 @@ class HomeController extends Controller
             'products' => $products
         ]);
     }
+
+    public function product(string $slug){
+        $product = Product::where('slug', $slug)->firstOrFail();
+
+        return view('website::product-details', [
+            'product' => $product
+        ]);
+    }
 }

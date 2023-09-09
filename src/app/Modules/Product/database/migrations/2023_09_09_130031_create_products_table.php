@@ -24,7 +24,7 @@ return new class extends Migration
             $table->unsignedInteger('quantity')->default(0);
             $table->string('sku')->nullable();
             $table->string('image')->nullable();
-            $table->string('images')->nullable();
+            $table->text('images')->nullable();
             $table->foreignId('category_id')->nullable()->constrained('categories')->nullOnDelete();
             $table->timestamps();
         });

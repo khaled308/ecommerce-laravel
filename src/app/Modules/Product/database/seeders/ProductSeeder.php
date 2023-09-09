@@ -26,6 +26,9 @@ class ProductSeeder extends Seeder
                 'price' => 100,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_20.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -37,6 +40,9 @@ class ProductSeeder extends Seeder
                 'price' => 200,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_22.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -48,6 +54,9 @@ class ProductSeeder extends Seeder
                 'price' => 300,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_10.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -59,6 +68,9 @@ class ProductSeeder extends Seeder
                 'price' => 400,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_01.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -70,6 +82,9 @@ class ProductSeeder extends Seeder
                 'price' => 500,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_21.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -81,6 +96,9 @@ class ProductSeeder extends Seeder
                 'price' => 600,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_15.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -92,6 +110,9 @@ class ProductSeeder extends Seeder
                 'price' => 700,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_17.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -103,6 +124,9 @@ class ProductSeeder extends Seeder
                 'price' => 800,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_05.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -114,6 +138,9 @@ class ProductSeeder extends Seeder
                 'price' => 900,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_07.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -125,6 +152,9 @@ class ProductSeeder extends Seeder
                 'price' => 1000,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_02.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -136,6 +166,9 @@ class ProductSeeder extends Seeder
                 'price' => 1100,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_09.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -147,6 +180,9 @@ class ProductSeeder extends Seeder
                 'price' => 1200,
                 'category_id' => $categories->random()->id,
                 'image' => 'assets/images/products/digital_06.jpg',
+                'images' => 'assets/images/products/digital_18.jpg,
+                assets/images/products/digital_17.jpg,assets/images/products/digital_15.jpg,
+                assets/images/products/digital_02.jpg',
                 'created_at' => now(),
                 'updated_at' => now()
             ]
