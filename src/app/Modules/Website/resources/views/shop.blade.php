@@ -239,7 +239,11 @@
                             <div class="product-info">
                                 <a href="{{route('product.details', $product->slug)}}" class="product-name"><span>{{$product->name}}</span></a>
                                 <div class="wrap-price"><span class="product-price">${{$product->price}}</span></div>
-                                <a href="#" class="btn add-to-cart">Add To Cart</a>
+                                <form method="post" class="cart-form">
+                                    @csrf
+                                    <input type="hidden" name="product_id" value="{{$product->id}}">
+                                    <button class="btn add-to-cart">Add To Cart</button>
+                                </form>
                             </div>
                         </div>
                     </li>
@@ -252,3 +256,7 @@
     </div><!--end main products area-->
 </div><!--end row-->
 @endsection
+
+@push('scripts')
+    <script src="{{asset('custom/cart.js')}}"></script>
+@endpush

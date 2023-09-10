@@ -4,6 +4,7 @@ namespace App\Modules\Cart\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class CartServiceProvider extends ServiceProvider{
     public function register(){
@@ -17,6 +18,8 @@ class CartServiceProvider extends ServiceProvider{
                 ->group(__DIR__ . '/../routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'cart');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+        View::composer('website::*', CartDataComposer::class);
     }
 
 }

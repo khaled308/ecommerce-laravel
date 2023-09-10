@@ -62,7 +62,7 @@
                 <div class="mid-section main-info-area">
 
                     <div class="wrap-logo-top left-section">
-                        <a href="index.html" class="link-to-home"><img src="assets/images/logo-top-1.png" alt="mercado"></a>
+                        <a href="/" class="link-to-home"><img src="assets/images/logo-top-1.png" alt="mercado"></a>
                     </div>
 
                     <div class="wrap-search center-section">
@@ -111,7 +111,7 @@
                             <a href="#" class="link-direction">
                                 <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                 <div class="left-info">
-                                    <span class="index">4 items</span>
+                                    <span class="index" id="cart-counter">{{$cart_count}} items</span>
                                     <span class="title">CART</span>
                                 </div>
                             </a>
@@ -145,7 +145,7 @@
                     <div class="container">
                         <ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
                             <li class="menu-item home-icon">
-                                <a href="index.html" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
+                                <a href="/" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
                             </li>
                             <li class="menu-item">
                                 <a href="about-us.html" class="link-term mercado-item-title">About Us</a>

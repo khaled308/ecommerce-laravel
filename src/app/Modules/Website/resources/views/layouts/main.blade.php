@@ -56,5 +56,6 @@
 	<script src="{{asset('assets/js/jquery.sticky.js')}}"></script>
 	<script src="{{asset('assets/js/functions.js')}}"></script>
     @livewireScripts
+	@stack('scripts')
 </body>
 </html>
