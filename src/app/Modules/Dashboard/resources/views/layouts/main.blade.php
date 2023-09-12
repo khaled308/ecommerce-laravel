@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="{{asset('dashboard/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('dashboard/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('dashboard/plugins/toastify/toastify.css')}}">
+
   @stack('styles')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -49,6 +51,22 @@
 <script src="{{asset('dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('dashboard/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/toastify/toastify.js')}}"></script>
+<script>
+ const successMessage = "{{session('success')}}";
+
+ console.log(successMessage);
+  if(successMessage){
+      Toastify({
+          text: successMessage,
+          duration: 3000,
+          gravity: "top",
+          position: 'right',
+          backgroundColor: "#4caf50",
+          stopOnFocus: true,
+      }).showToast();
+  }
+</script>
 @stack('scripts')
 </body>
 </html>
