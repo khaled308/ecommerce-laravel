@@ -36,6 +36,11 @@
                                                 @csrf
                                             </form>
                                         </li>
+                                        @if (auth()->user()->role == 'admin')
+                                            <li class="menu-item" >
+                                                <a title="Admin" href="{{route('dashboard')}}">Dashboard</a>
+                                            </li>
+                                        @endif
                                     </ul>
                                 </li>
                             @endauth
