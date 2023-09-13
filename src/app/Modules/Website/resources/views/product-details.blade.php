@@ -14,9 +14,15 @@
             <div class="detail-media">
                 <div class="product-gallery">
                   <ul class="slides">
-                    @foreach (explode(',', $product->images) as $image)
-                        <li data-thumb="{{ asset(trim($image)) }}">
-                            <img src="{{ asset(trim($image)) }}" alt="product thumbnail" />
+                    @foreach ($product->images as $img)
+                    @php
+                        $image = $img->image;
+                        if (!file_exists($image)) {
+                            $image = 'uploads/' . $image;
+                        }
+                    @endphp
+                        <li data-thumb="{{ asset($image) }}">
+                            <img src="{{ asset($image) }}" alt="product thumbnail" />
                         </li>
                     @endforeach
                   </ul>

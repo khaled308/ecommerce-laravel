@@ -14,10 +14,7 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         $categories = DB::table('categories')->get();
-
-        DB::table('products')->delete();
-
-        DB::table('products')->insert([
+        $data = [
             [
                 'name' => 'product-1',
                 'slug' => str()->slug('product-1'),
@@ -186,6 +183,34 @@ class ProductSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now()
             ]
-        ]);
+        ];
+
+        DB::table('products')->delete();
+
+
+        foreach ($data as $product) {
+            $productId = DB::table('products')->insertGetId([
+                'name' => $product['name'],
+                'slug' => $product['slug'],
+                'short_description' => $product['short_description'],
+                'description' => $product['description'],
+                'price' => $product['price'],
+                'category_id' => $product['category_id'],
+                'image' => $product['image'],
+                'created_at' => $product['created_at'],
+                'updated_at' => $product['updated_at']
+            ]);
+
+            $images = explode(',', $product['images']);
+            
+            foreach ($images as $image) {
+                DB::table('product_images')->insert([
+                    'product_id' => $productId,
+                    'image' => trim($image),
+                    'created_at' => $product['created_at'],
+                    'updated_at' => $product['updated_at']
+                ]);
+            }
+        }
     }
 }

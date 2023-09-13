@@ -233,7 +233,15 @@
                         <div class="product product-style-3 equal-elem ">
                             <div class="product-thumnail">
                                 <a href="{{route('product.details', $product->slug)}}" title="{{$product->name}}">
-                                    <figure><img src="{{$product->image}}" alt="{{$product->name}}"></figure>
+                                    <figure>
+                                        @php
+                                            $image = $product->image;
+                                            if (!file_exists($image)) {
+                                                $image = 'uploads/' . $image;
+                                            }
+                                        @endphp
+                                        <img src="{{$image}}" alt="{{$product->name}}" style="width: 250px; height: 250px;">
+                                    </figure>
                                 </a>
                             </div>
                             <div class="product-info">
