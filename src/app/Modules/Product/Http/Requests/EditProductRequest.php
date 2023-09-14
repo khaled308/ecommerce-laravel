@@ -26,7 +26,7 @@ class EditProductRequest extends FormRequest
             'short_description' => 'required|string|max:255',
             'description' => 'required|string',
             'price' => 'required|numeric',
-            'discount' => 'nullable|numeric',
+            'discount' => 'nullable|numeric|max:100',
             'quantity' => 'required|numeric',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'category_id' => 'required|exists:categories,id',

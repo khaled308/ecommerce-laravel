@@ -51,6 +51,12 @@
                           <label for="">Quantity</label>
                           <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control" name="quantity" value="{{old('quantity', $product->quantity)}}">
                       </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="">Discount</label>
+                          <input type="text" oninput="this.value = this.value.replace(/[^0-9\.]|(\.(?=.*\.))/g, '');" class="form-control" name="discount" value="{{old('discount', $product->discount)}}">
+                        </div>
+                      </div>
                     </div>
                     <div class="row">
                       <div class="col">

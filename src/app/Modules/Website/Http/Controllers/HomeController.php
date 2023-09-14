@@ -15,11 +15,13 @@ class HomeController extends Controller
         $sliders = Slider::all();
         $latestProducts = Product::latest()->take(8)->get();
         $categories = Category::with('products')->get();
+        $productsOnSale = Product::where('discount', '>', 0)->get();
 
         return view("website::index", [
             'sliders' => $sliders,
             'latestProducts' => $latestProducts,
-            'categories' => $categories
+            'categories' => $categories,
+            'productsOnSale' => $productsOnSale
         ]);
     }
 
