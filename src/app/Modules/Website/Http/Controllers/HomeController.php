@@ -4,15 +4,22 @@ namespace App\Modules\Website\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Modules\Product\Models\Product;
+use App\Modules\Slider\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
-        return view("website::index");
+    public function index()
+    {
+        $sliders = Slider::all();
+
+        return view("website::index", [
+            'sliders' => $sliders,
+        ]);
     }
 
-    public function shop(){
+    public function shop()
+    {
         $products = Product::paginate(10);
 
         return view('website::shop', [
@@ -20,7 +27,8 @@ class HomeController extends Controller
         ]);
     }
 
-    public function product(string $slug){
+    public function product(string $slug)
+    {
         $product = Product::where('slug', $slug)->firstOrFail();
 
         return view('website::product-details', [

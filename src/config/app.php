@@ -160,6 +160,7 @@ return [
          * Package Service Providers...
          */
         App\Modules\Dashboard\Providers\DashboardServiceProvider::class,
+        App\Modules\Slider\Providers\SliderServiceProvider::class,
         App\Modules\Category\Providers\CategoryServiceProvider::class,
         App\Modules\Product\Providers\ProductServiceProvider::class,
         App\Modules\Website\Providers\WebsiteServiceProvider::class,
